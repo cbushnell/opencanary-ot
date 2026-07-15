@@ -2,9 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/thinkst/opencanary/master/docs/logo.png" width="50" style="float: left"> OpenCanary is a multi-protocol network honeypot. It's primary use-case is to catch hackers after they've breached non-public networks. It has extremely low resource requirements and can be tweaked, modified, and extended.
 
-[![OpenCanary Tests](https://github.com/thinkst/opencanary/actions/workflows/opencanary_tests.yml/badge.svg)](https://github.com/thinkst/opencanary/actions/workflows/opencanary_tests.yml)
-[![Docker build](https://github.com/thinkst/opencanary/actions/workflows/docker-build.yml/badge.svg)](https://github.com/thinkst/opencanary/actions/workflows/docker-build.yml)
-[![Publish to PyPI](https://github.com/thinkst/opencanary/actions/workflows/publish.yml/badge.svg)](https://github.com/thinkst/opencanary/actions/workflows/publish.yml)
+[![OpenCanary Tests](https://github.com/cbushnell/opencanary-ot/actions/workflows/opencanary_tests.yml/badge.svg)](https://github.com/cbushnell/opencanary-ot/actions/workflows/opencanary_tests.yml)
 
 ## Overview
 
@@ -14,7 +12,7 @@ OpenCanary is implemented in Python, so the core honeypot is cross-platform; how
 
 This README describes how to install and configure OpenCanary on Ubuntu Linux and MacOS.
 
-OpenCanary is the Open Source version of our commercial [Thinkst Canary](https://canary.tools) honeypot.
+OpenCanary is the Open Source version of the commercial [Thinkst Canary](https://canary.tools) honeypot.
 
 ## Table of Contents
 - **[Prerequisites](#prerequisites)**
@@ -138,8 +136,8 @@ The Windows File Share (smb) module is not available on macOS.
 To install from source, instead of running pip do the following:
 
 ```
-$ git clone https://github.com/thinkst/opencanary
-$ cd opencanary
+$ git clone https://github.com/cbushnell/opencanary-ot
+$ cd opencanary-ot
 $ python setup.py sdist
 $ cd dist
 $ pip install opencanary-<version>.tar.gz
@@ -161,7 +159,7 @@ $ pkgx opencanaryd --version
 
 ### Installation for Docker
 
-OpenCanary Docker images are hosted on Docker Hub. These are only useful on Linux Docker hosts, as the `host` network engine is required for accurate network information.
+Docker images are built locally via `docker-compose.yml` (see below). These are only useful on Linux Docker hosts, as the `host` network engine is required for accurate network information.
 
 ## Configuring OpenCanary
 
